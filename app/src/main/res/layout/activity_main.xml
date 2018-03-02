@@ -12,6 +12,7 @@
     android:layout_alignParentStart="true"
     android:layout_alignParentTop="true"
     android:layout_centerHorizontal="false"
+    android:background="@color/colorPrimaryDark"
     android:paddingBottom="16dp"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
@@ -22,24 +23,40 @@
         android:id="@+id/coal_iv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="132dp"
-        android:contentDescription="@string/todo"
-        app:srcCompat="@drawable/coal" />
-
+        android:layout_centerInParent="false"
+        android:layout_centerVertical="true"
+        android:background="@color/colorPrimaryDark"
+        android:contentDescription="TODO"
+        android:cropToPadding="false"
+        app:srcCompat="@drawable/coal_new" />
 
     <TextView
         android:id="@+id/i_am_poor_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="@string/title"
+        android:layout_alignBaseline="@+id/poor_tv"
+        android:layout_alignBottom="@+id/poor_tv"
+        android:layout_alignLeft="@+id/coal_iv"
+        android:layout_alignStart="@+id/coal_iv"
+        android:layout_marginLeft="77dp"
+        android:layout_marginStart="77dp"
+        android:text="@string/title_1"
+        android:textSize="50sp" />
+
+    <TextView
+        android:id="@+id/poor_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/coal_iv"
+        android:layout_marginLeft="13dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="13dp"
+        android:layout_toEndOf="@+id/i_am_poor_tv"
+        android:layout_toRightOf="@+id/i_am_poor_tv"
+        android:text="@string/title_2"
         android:textSize="50sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textStyle="bold" />
 
 
 </RelativeLayout>
